@@ -1,0 +1,12 @@
+<strong> Olá, {{ deliveryman }} </strong>
+<p>Você tem uma nova encomenda para ser entregue</p>
+<p>
+    <strong> Criada em: </strong> {{ created_at }} <br />
+    <strong> Produto: </strong> {{ product }} <br />
+    <strong> Destinatário: </strong> {{ recipient }} <br />
+    <hr />
+    <strong> Dados do endereço:  </strong> <br />
+    <strong> Rua: </strong> {{ address }}, {{ number }} - <strong> Complemento: </strong> {{ complement }} <br />
+    <strong> Local: </strong> {{ city }}/{{ state }} <br />
+    <strong> CEP: </strong> {{ zipcode }}
+</p>
