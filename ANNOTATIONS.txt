@@ -24,3 +24,8 @@
 
 02 - Executando o seed
     yarn sequelize db:seed:all
+
+
+DESAFIOS
+https://github.com/lucasbittar/gostack-challenge-03
+https://github.com/vagnerwentz/fastfeet-rocketseat-desafio

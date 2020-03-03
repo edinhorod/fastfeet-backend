@@ -25,13 +25,9 @@ class DeliverymanController {
             return res.status(400).json({ error: 'Email already in use' });
         }
 
-        // const { originalname: name, filename: path } = req.file;
-        console.log(req.file);
-
         const deliveryman = await Deliveryman.create(req.body);
 
         return res.json(deliveryman);
-        // return res.json(deliveryman);
     }
 
     async update(req, res) {

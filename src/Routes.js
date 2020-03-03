@@ -12,6 +12,8 @@ import OrderController from './app/controllers/OrderController';
 
 import DeliverymanOrdersController from './app/controllers/DeliverymanOrdersController';
 
+import DeliveryProblemController from './app/controllers/DeliveryProblemController';
+
 import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
@@ -54,7 +56,18 @@ routes.get(
     '/deliveryman/:deliveryman_id/deliveries',
     DeliverymanOrdersController.index
 );
+routes.put(
+    '/deliveryman/:deliveryman_id/orders/:order_id',
+    DeliverymanOrdersController.update
+);
 
 routes.get('/orders', OrderController.index);
 routes.post('/orders', OrderController.store);
+
+routes.get('/delivery/:order_id/problems', DeliveryProblemController.index);
+routes.post('/delivery/:order_id/problems', DeliveryProblemController.store);
+routes.delete(
+    '/problem/:order_id/cancel-delivery',
+    DeliveryProblemController.delete
+);
 export default routes;

@@ -7,6 +7,7 @@ class Deliveryman extends Model {
                 name: Sequelize.STRING,
                 avatar_id: Sequelize.INTEGER,
                 email: Sequelize.STRING,
+                counter: Sequelize.INTEGER,
             },
             {
                 sequelize,
