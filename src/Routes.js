@@ -51,7 +51,7 @@ routes.put('/deliverymans/:id', DeliverymanController.update);
 routes.delete('/deliverymans/:id', DeliverymanController.delete);
 
 routes.get(
-    '/deliverymans/:deliveryman_id/orders',
+    '/deliveryman/:deliveryman_id/deliveries',
     DeliverymanOrdersController.index
 );
 

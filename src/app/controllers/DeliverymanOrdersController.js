@@ -16,14 +16,14 @@ class DeliverymanOrdersController {
             return res.status(400).json({ error: 'Deliveryman not found' });
         }
 
-        const orders = await Order.findAll({
+        const deliveries = await Order.findAll({
             where: {
                 deliveryman_id,
                 canceled_at: null,
                 end_date: null,
             },
         });
-        return res.json(orders);
+        return res.json(deliveries);
     }
 }
 
