@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import { getHours, parseISO, format } from 'date-fns';
+import { getHours, format } from 'date-fns';
 
 import pt from 'date-fns/locale/pt';
 import Order from '../models/Order';

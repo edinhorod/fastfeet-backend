@@ -10,6 +10,8 @@ import FileController from './app/controllers/FileController';
 
 import OrderController from './app/controllers/OrderController';
 
+import DeliverymanOrdersController from './app/controllers/DeliverymanOrdersController';
+
 import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
@@ -47,6 +49,11 @@ routes.get('/deliverymans', DeliverymanController.index);
 routes.post('/deliverymans', DeliverymanController.store);
 routes.put('/deliverymans/:id', DeliverymanController.update);
 routes.delete('/deliverymans/:id', DeliverymanController.delete);
+
+routes.get(
+    '/deliverymans/:deliveryman_id/orders',
+    DeliverymanOrdersController.index
+);
 
 routes.get('/orders', OrderController.index);
 routes.post('/orders', OrderController.store);
